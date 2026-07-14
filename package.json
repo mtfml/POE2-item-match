@@ -1,0 +1,27 @@
+{
+  "name": "poe2-price-check",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "node build.mjs",
+    "build": "node build.mjs --prod",
+    "make-map": "tsx scripts/build-data-map.ts"
+  },
+  "dependencies": {
+    "dot-prop": "^9.0.0",
+    "luxon": "^3.7.2",
+    "neverthrow": "^8.0.0",
+    "object-hash": "^3.0.0",
+    "uiohook-napi": "1.5.x"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.7.2",
+    "@types/node": "22.x.x",
+    "@types/object-hash": "^3.0.6",
+    "electron": "^40.9.1",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.19.0",
+    "typescript": "5.9.x"
+  }
+}

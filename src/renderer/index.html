@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>poe2-price-check</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #1b1b1f;
+        color: #e4e4e7;
+        font-size: 14px;
+      }
+      #app {
+        padding: 16px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 16px;
+        margin: 0 0 4px;
+      }
+      .muted {
+        color: #9a9aa5;
+      }
+      .item-header {
+        border-bottom: 1px solid #33333a;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+      .item-header .name {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .rarity-Normal { color: #c8c8c8; }
+      .rarity-Magic { color: #8888ff; }
+      .rarity-Rare { color: #ffff77; }
+      .rarity-Unique { color: #af6025; }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .filters-table {
+        table-layout: fixed;
+      }
+      .filters-table td {
+        padding: 3px 6px;
+        vertical-align: middle;
+      }
+      .filters-table td:first-child:not(.mod-group-label) {
+        width: 30px;
+        padding-right: 2px;
+      }
+      .filters-table input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .filters-table td:nth-child(2):not(.mod-group-label) {
+        padding-left: 2px;
+      }
+      .filters-table td:last-child:not(.mod-group-label) {
+        width: 150px;
+        padding-right: 0;
+        text-align: right;
+        white-space: nowrap;
+      }
+      .filters-table input[type="number"] {
+        width: 60px;
+        background: #26262c;
+        border: 1px solid #3a3a42;
+        color: inherit;
+        border-radius: 3px;
+        padding: 2px 4px;
+      }
+      button {
+        background: #3b5bdb;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 14px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      button:hover {
+        background: #4c6ef5;
+      }
+      button:disabled {
+        background: #3a3a42;
+        cursor: default;
+      }
+      #search-btn-row {
+        margin: 10px 0 16px;
+      }
+
+      .results-table th,
+      .results-table td {
+        border-bottom: 1px solid #2a2a30;
+        padding: 6px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .results-table th {
+        color: #9a9aa5;
+        font-weight: 500;
+        font-size: 12px;
+      }
+      .results-table tr.mine {
+        background: #3b5bdb22;
+        box-shadow: inset 3px 0 0 #4c6ef5;
+      }
+      ul.mods {
+        font-size: 12px;
+        color: #b9b9c2;
+        margin: 0;
+        padding-left: 16px;
+      }
+      .price {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .mod-group-label {
+        padding-top: 14px !important;
+        font-size: 15px;
+        font-weight: 700;
+        color: #e4e4e7;
+      }
+      .filters-table tr:first-child .mod-group-label {
+        padding-top: 3px !important;
+      }
+      .mod-group .mod-group-label {
+        padding-top: 0 !important;
+      }
+      .mod-group + .mod-group {
+        margin-top: 6px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">Waiting for ` over an item in PoE2...</div>
+    <script src="../../dist/renderer.js"></script>
+  </body>
+</html>
